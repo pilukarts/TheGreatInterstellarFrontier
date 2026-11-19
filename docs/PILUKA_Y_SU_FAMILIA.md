@@ -46,3 +46,9 @@ La supervivencia de una inmensa ciudad-nave no depende únicamente de sus comand
 - Cómo se conocen por primera vez Piluka y la comandante.
 
 **Nota:** No se ha establecido que el padre sea un Santo Sabio; sí que es anciano y fue alumno de uno antiguo.
+
+## Discreción y familia — canon confirmado
+- Piluka **quiere pasar desapercibida**.
+- **No quiere que sus padres sepan que ella está guiando todo esto** (el alcance exacto de «guiar» aún está por definir).
+- Sus padres **saben que ella es la única que puede salvarlos**, pero **no le dan especial importancia**; no convertir esto en indiferencia hacia ella sin confirmación.
+- La aparente paradoja entre lo que sus padres saben y lo que Piluka quiere ocultar es deliberadamente interesante: **no explicar aún cómo lo saben ni qué saben exactamente**.
