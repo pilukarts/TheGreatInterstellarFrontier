@@ -9,11 +9,13 @@ Un juego de exploración, reconstrucción, rescate, diplomacia y estrategia espa
 - En la **planta central (4 de 7)** viven los jubilados y los **Santos Sabios**: veteranos y maestros que ejercen autoridad sobre decisiones que afectan al destino de las personas.
 - Esa planta central contiene un área de **servicios** con **hospital, cárcel y mortuorio**, entre otras instalaciones.
 - Los **niños y los ancianos son sagrados** para la civilización: representan el comienzo y el final; se protege el futuro y se honra la experiencia.
-- El Ark-Forge ha sufrido un devastador impacto de **meteoritos enviados deliberadamente por sus enemigos**. La reconstrucción de la ciudad está pendiente; hay pérdidas, supervivientes y sectores aislados.
+- El Ark-Forge ha sufrido un devastador impacto de **meteoritos enviados deliberadamente por sus enemigos** (verdad conocida por los creadores, **no por los personajes ni por el jugador al principio**). La reconstrucción de la ciudad está pendiente; hay pérdidas, supervivientes y sectores aislados.
+- **Los meteoritos llegaron sin ser pronosticados.** Los **Santos Sabios están desconcertados** y creen que lo sucedido fue una **tormenta de meteoritos o un fenómeno/corriente interestelar natural**. Esta es su interpretación inicial, no la causa verdadera.
 - Existen **otras naves hermanas Ark-Forge**; se han perdido comunicaciones y aparecen señales fragmentarias.
 - El jugador lidera rescates, reparación de viviendas, escuelas y servicios, patrullas, colonias y expediciones; la empatía y las decisiones del Consejo importan.
 
 ## Misterios narrativos (no revelar prematuramente)
+- ¿Por qué no hubo pronóstico ni aviso previo del fenómeno? ¿Qué pistas permitirán distinguir una tormenta natural de un ataque deliberado?
 - ¿Quién dirige los meteoritos y por qué?
 - ¿Buscaban destruir la nave o recuperar algo?
 - ¿Qué ocurrió con las naves hermanas?
