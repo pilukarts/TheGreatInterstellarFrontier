@@ -1,7 +1,7 @@
 # Piluka y su familia — el artesano que sostiene el Ark-Forge
 
 ## Canon confirmado
-- **Piluka** es artista, **multidisciplinar** y **tiene un poder**, cuya naturaleza aún no ha sido revelada. Sus disciplinas y competencias concretas todavía están por definir.
+- **Piluka** es artista, **multidisciplinar** y **tiene un poder**, cuya naturaleza aún no ha sido revelada. **Los demás solo se darán cuenta de ese poder en el último momento de la historia**; es un giro final que no debe anticiparse. Sus disciplinas y competencias concretas todavía están por definir.
 - **Piluka es el alma del Ark-Forge**. Hay varios artistas en la ciudad-nave, pero ninguno tiene su valía excepcional.
 - Es hija de **un artesano y una cocinera**.
 - Su padre es **anciano** y fabrica piezas esenciales del Ark-Forge para **evitar que su estructura se fracture**.
@@ -18,7 +18,7 @@ La supervivencia de una inmensa ciudad-nave no depende únicamente de sus comand
 - La técnica transmitida por el Sabio podría ser difícil de reproducir con maquinaria moderna.
 
 ## Por decidir
-- Qué es exactamente el poder de Piluka, cómo funciona, qué límites tiene y quién lo conoce.
+- Qué es exactamente el poder de Piluka, cómo funciona y qué límites tiene. Su revelación ante los demás está reservada para el último momento.
 - Qué significa en la práctica que sea «el alma del Ark-Forge».
 - Nombre y edad exacta del padre.
 - Qué piezas fabrica y cómo funcionan.
