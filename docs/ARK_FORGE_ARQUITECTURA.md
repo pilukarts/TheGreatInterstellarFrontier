@@ -1,4 +1,4 @@
-# Ark-Forge — arquitectura y sociedad
+# Frontier Ark — arquitectura y sociedad
 
 ![Corte conceptual de las siete plantas](../art/ark-forge-blueprint.svg)
 
@@ -28,4 +28,4 @@ Los mayores jubilados son los maestros más experimentados de la civilización. 
 Meteoritos **dirigidos por enemigos** golpearon el anillo. Se perdieron secciones, quedaron expuestos pasillos y servicios, y hubo evacuaciones y rescates. Las misiones de reparación reconstruyen una **ciudad viva**, no solo un casco metálico.
 
 ## Dirección artística
-Azul marino y negro; líneas cian luminosas, detalles de ingeniería, cortes seccionales de plantas, pasillos, escuelas, barrios, hospitales y hangares. El dibujo SVG adjunto es una **primera lámina esquemática original**, no un plano definitivo.
+Azul marino y negro; líneas cian luminosas, detalles de ingeniería, cortes seccionales de plantas, pasillos, escuelas, barrios, hospitales y hangares. El dibujo SVG adjunto es una **segunda lámina conceptual rediseñada**, con una vista más detallada de la ciudad-nave y el corte de las siete plantas. **No es un plano definitivo ni está a escala.**
