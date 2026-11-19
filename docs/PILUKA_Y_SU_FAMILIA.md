@@ -15,6 +15,18 @@
 - La revelación conecta su condición de artista multidisciplinar con la supervivencia colectiva; **el procedimiento concreto sigue sin definirse** y no debe adelantarse en la narración.
 - **No establecer todavía** que las demás naves están simultáneamente averiadas ni qué solución técnica aplica Piluka: esas son posibilidades dramáticas, no decisiones confirmadas.
 
+## Piluka como narradora — canon confirmado
+- Piluka tiene **un pequeño estudio propio**, situado en una zona distinta de donde viven sus **padres ancianos**.
+- Es **hija única** y **soltera**; vive con intensidad.
+- **Ella será la narradora** de *The Great Interstellar Frontier* y **aparecerá de vez en cuando** dentro del juego.
+- **Sabe muchas cosas** y se la compara con una **pitonisa**, pero **no puede hablar de ese conocimiento con la mayoría de la gente**.
+- **No está confirmado** que prediga literalmente el futuro, ni el origen o las reglas de su conocimiento: mantener el misterio.
+
+## Propuesta de implementación narrativa (no canon)
+- Combinar intervenciones breves de narración con apariciones de Piluka como personaje dentro del Ark-Forge.
+- Dejar pistas sutiles sin explicar su poder ni anticipar la revelación final.
+- Mantener su vida cotidiana y su estudio como parte del mundo vivo, no solo como vehículo de exposición.
+
 ## Valor para la historia
 La supervivencia de una inmensa ciudad-nave no depende únicamente de sus comandantes: también de oficios artesanos, saberes transmitidos entre generaciones y personas que trabajan lejos de los focos. La experiencia del padre conecta con el respeto que la sociedad concede a los Santos Sabios.
 
@@ -30,6 +42,7 @@ La supervivencia de una inmensa ciudad-nave no depende únicamente de sus comand
 - Qué piezas fabrica y cómo funcionan.
 - Identidad del Sabio que le enseñó el oficio.
 - Si la madre cocinera desempeña alguna función especial en la comunidad.
+- Qué límites tiene el conocimiento de Piluka y por qué no puede compartirlo con la mayoría.
 - Cómo se conocen por primera vez Piluka y la comandante.
 
 **Nota:** No se ha establecido que el padre sea un Santo Sabio; sí que es anciano y fue alumno de uno antiguo.
