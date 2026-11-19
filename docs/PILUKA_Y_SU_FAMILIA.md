@@ -1,7 +1,7 @@
 # Piluka y su familia — el artesano que sostiene el Ark-Forge
 
 ## Canon confirmado
-- **Piluka** es artista y no tiene superpoderes.
+- **Piluka** es artista, **multidisciplinar** y no tiene superpoderes. Sus disciplinas y competencias concretas todavía están por definir.
 - Es hija de **un artesano y una cocinera**.
 - Su padre es **anciano** y fabrica piezas esenciales del Ark-Forge para **evitar que su estructura se fracture**.
 - El padre sigue ayudando a estabilizar el Ark-Forge mediante un conocimiento o técnica que **un antiguo Sabio le enseñó**.
