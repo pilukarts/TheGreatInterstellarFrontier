@@ -9,6 +9,12 @@
 - Piluka y la comandante principal **no se conocen al principio**.
 - Existe un gran contraste social: la comandante pertenece a una familia muy poderosa y venerada; Piluka proviene de una familia trabajadora.
 
+## Revelación final — canon confirmado, mecanismo reservado
+- **Piluka es la clave de todo, la última pieza que faltaba**.
+- En el momento decisivo, cuando todos están asustados, **Piluka sonríe** porque comprende que **todo lo que sabe puede salvar a la humanidad del Ark-Forge y a la de las demás naves Ark**.
+- La revelación conecta su condición de artista multidisciplinar con la supervivencia colectiva; **el procedimiento concreto sigue sin definirse** y no debe adelantarse en la narración.
+- **No establecer todavía** que las demás naves están simultáneamente averiadas ni qué solución técnica aplica Piluka: esas son posibilidades dramáticas, no decisiones confirmadas.
+
 ## Valor para la historia
 La supervivencia de una inmensa ciudad-nave no depende únicamente de sus comandantes: también de oficios artesanos, saberes transmitidos entre generaciones y personas que trabajan lejos de los focos. La experiencia del padre conecta con el respeto que la sociedad concede a los Santos Sabios.
 
