@@ -1,17 +1,20 @@
 # Biblia del universo — The Great Interstellar Frontier
 
 ## Visión
-Un juego de exploración, reconstrucción, rescate, diplomacia y estrategia espacial. La humanidad viaja en inmensas ciudades-nave **Ark-Forge**, construidas en la Tierra, para buscar nuevos hogares, reliquias y tecnologías antiguas. La supervivencia importa tanto como el combate.
+Un juego de exploración, reconstrucción, rescate, diplomacia y estrategia espacial. La humanidad viaja en inmensas ciudades-nave **Frontier Ark**, construidas en la Tierra, para buscar nuevos hogares, reliquias y tecnologías antiguas. La supervivencia importa tanto como el combate.
 
 ## Canon confirmado
-- **Ark-Forge** es una enorme ciudad-nave circular: anillo exterior habitable, plataformas interiores superpuestas y torre central de mando. **No es una rueda con radios.**
+- **Frontier Ark** es una enorme ciudad-nave circular: anillo exterior habitable, plataformas interiores superpuestas y torre central de mando. **No es una rueda con radios.**
 - El **anillo exterior** alberga a la población en **siete plantas** y zonas especializadas, incluida la educación.
+- **La Tierra es inhabitable**; por eso la humanidad construyó y envió numerosas ciudades-nave **Frontier Ark** lejos de su planeta de origen para buscar **nuevos lugares habitables**, materiales, piezas y tecnologías que permitan mantener las naves y asegurar su futuro.
+- Hay habitantes nacidos o criados en el espacio que **nunca han experimentado la luz directa del Sol sobre la piel ni los paisajes naturales de la Tierra**. El contraste entre sobrevivir bajo iluminación artificial y anhelar un cielo natural es parte fundamental del tono humano del juego.
+- **Por definir:** qué volvió inhabitable la Tierra, cuándo ocurrió, hasta qué punto hay generaciones enteras nacidas en el espacio, el papel exacto de las piezas y las rutas de las expediciones.
 - En la **planta central (4 de 7)** viven los jubilados y los **Santos Sabios**: veteranos y maestros que ejercen autoridad sobre decisiones que afectan al destino de las personas.
 - Esa planta central contiene un área de **servicios** con **hospital, cárcel y mortuorio**, entre otras instalaciones.
 - Los **niños y los ancianos son sagrados** para la civilización: representan el comienzo y el final; se protege el futuro y se honra la experiencia.
-- El Ark-Forge ha sufrido un devastador impacto de **meteoritos enviados deliberadamente por sus enemigos** (verdad conocida por los creadores, **no por los personajes ni por el jugador al principio**). La reconstrucción de la ciudad está pendiente; hay pérdidas, supervivientes y sectores aislados.
+- El Frontier Ark ha sufrido un devastador impacto de **meteoritos enviados deliberadamente por sus enemigos** (verdad conocida por los creadores, **no por los personajes ni por el jugador al principio**). La reconstrucción de la ciudad está pendiente; hay pérdidas, supervivientes y sectores aislados.
 - **Los meteoritos llegaron sin ser pronosticados.** Los **Santos Sabios están desconcertados** y creen que lo sucedido fue una **tormenta de meteoritos o un fenómeno/corriente interestelar natural**. Esta es su interpretación inicial, no la causa verdadera.
-- Existen **otras naves hermanas Ark-Forge**; se han perdido comunicaciones y aparecen señales fragmentarias.
+- Existen **otras naves hermanas Frontier Ark**; se han perdido comunicaciones y aparecen señales fragmentarias.
 - El jugador lidera rescates, reparación de viviendas, escuelas y servicios, patrullas, colonias y expediciones; la empatía y las decisiones del Consejo importan.
 
 ## Misterios narrativos (no revelar prematuramente)
@@ -19,7 +22,7 @@ Un juego de exploración, reconstrucción, rescate, diplomacia y estrategia espa
 - ¿Quién dirige los meteoritos y por qué?
 - ¿Buscaban destruir la nave o recuperar algo?
 - ¿Qué ocurrió con las naves hermanas?
-- ¿Qué significa el identificador parcial **ARK-FORGE · 07**?
+- ¿Qué significa el identificador parcial **FRONTIER ARK · 07**?
 - ¿Qué es la presencia desconocida que pareció proteger a los supervivientes de AF-S17?
 - ¿Qué secretos esconden las reliquias y los registros de la nave?
 
