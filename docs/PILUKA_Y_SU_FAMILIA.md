@@ -52,3 +52,11 @@ La supervivencia de una inmensa ciudad-nave no depende únicamente de sus comand
 - **No quiere que sus padres sepan que ella está guiando todo esto** (el alcance exacto de «guiar» aún está por definir).
 - Sus padres **saben que ella es la única que puede salvarlos**, pero **no le dan especial importancia**; no convertir esto en indiferencia hacia ella sin confirmación.
 - La aparente paradoja entre lo que sus padres saben y lo que Piluka quiere ocultar es deliberadamente interesante: **no explicar aún cómo lo saben ni qué saben exactamente**.
+
+## Giro central revelado por la creadora — canon confidencial / spoiler
+- **Piluka está en coma** y **sueña que es la heroína** de las aventuras que narra.
+- **Los habitantes del Ark-Forge no saben que Piluka los está guiando**.
+- Piluka **crea/narra las historias como si se las leyera a alguien**; el destinatario concreto y la relación exacta entre el coma, el sueño y la realidad del Ark-Forge todavía no están definidos.
+- El mapa de Piluka y las transiciones entre misiones podrían ayudar a sincronizar la narración y los estados del juego; esto es una **propuesta de diseño**, no una explicación confirmada del misterio.
+- **No asumir** que todos los habitantes son imaginarios, que nada es real, ni cómo se resuelve o termina el coma.
+- **Tratar este apartado como spoiler mayor**, no exponerlo en descripciones públicas dirigidas a jugadores.
