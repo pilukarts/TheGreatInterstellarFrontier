@@ -2,7 +2,7 @@
 
 > **«Mientras uno de nosotros siga adelante, el Ark-Forge seguirá vivo».**
 
-Archivo creativo del universo de **Forgeite Frenzy**: civilizaciones, arquitectura espacial, personajes, misiones, misterios y conceptos visuales.
+Archivo creativo de **The Great Interstellar Frontier**, universo narrativo relacionado con **Forgeite Frenzy** y otros juegos espaciales de **Pilukarts Studio**: civilizaciones, arquitectura espacial, personajes, misiones, misterios y conceptos visuales.
 
 ![Plano conceptual del Ark-Forge](art/ark-forge-blueprint.svg)
 
@@ -10,6 +10,9 @@ Archivo creativo del universo de **Forgeite Frenzy**: civilizaciones, arquitectu
 - [Biblia del universo](docs/BIBLIA_DEL_UNIVERSO.md) — canon, ideas en desarrollo y misterios.
 - [Arquitectura del Ark-Forge](docs/ARK_FORGE_ARQUITECTURA.md) — anillo habitado, siete plantas y Santuario de los Sabios.
 - [Misiones y personajes](docs/MISIONES_Y_PERSONAJES.md) — rescates, expediciones y protagonistas.
+- [Memorial Day de la Gran Guerra](docs/MEMORIAL_DAY_GRAN_GUERRA.md) — recuerdo de todas las víctimas.
+- [La comandante y los linajes](docs/LA_COMANDANTE_Y_LOS_LINAJES.md) — privilegio, responsabilidad y trabajo solitario.
+- [Universo compartido de Pilukarts Studio](docs/PILUKARTS_UNIVERSO_COMPARTIDO.md) — conexiones con Super Piluka Galaxy y otros juegos.
 - [Arte conceptual](art/) — dibujos originales en SVG, editables.
 
 ## Cómo trabajamos
