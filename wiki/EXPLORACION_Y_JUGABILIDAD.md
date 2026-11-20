@@ -15,6 +15,14 @@
 3. **Dirigir.** Organizar equipos, patrullas y recursos para afrontar emergencias.
 4. **Vivir la historia.** Conocer personajes, decidir entre alternativas y ver cómo cambian las relaciones y el mundo.
 
+## Plantilla de escuadrón: cinco elegidos entre muchos
+
+**Regla establecida por la creadora:** el videojuego contará con **más de cinco soldados o personajes disponibles**. El jugador **elige cuáles cinco forman su equipo activo** para las expediciones y batallas. Los cinco que aparecen en una escena son un escuadrón elegido, **no todo el elenco del juego**.
+
+La selección debe permitir estilos de juego diferentes y dar importancia a las personas que viajan juntas. **Pendiente de diseñar:** número total de personajes, sus especialidades, si el equipo podrá cambiarse en cualquier momento y qué personajes serán reclutables o aliados.
+
+Esta elección de escuadrón es distinta de los **dos caminos de historia por capítulo**, que se eligen mediante el diálogo. Ambas decisiones pueden convivir dentro de una misma aventura.
+
 ## Dos historias por capítulo: el diálogo decide
 
 **Regla narrativa establecida por la creadora:** **cada capítulo ofrece dos caminos de historia**. El jugador escucha o lee un diálogo, elige cómo responder y **continúa por la historia correspondiente a su decisión**. No es solo una frase diferente: la elección debe repercutir en la misión y en sus consecuencias.
