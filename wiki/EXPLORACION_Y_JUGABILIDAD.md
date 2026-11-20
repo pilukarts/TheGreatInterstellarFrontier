@@ -15,11 +15,17 @@
 3. **Dirigir.** Organizar equipos, patrullas y recursos para afrontar emergencias.
 4. **Vivir la historia.** Conocer personajes, decidir entre alternativas y ver cómo cambian las relaciones y el mundo.
 
-## Decisiones claras, consecuencias importantes
+## Dos historias por capítulo: el diálogo decide
 
-**Propuesta de interfaz:** ante algunos acontecimientos, el jugador recibe **dos opciones**, cada una con ventajas y costes. La elección puede influir en quién recibe ayuda primero, qué se repara o qué ruta explorar.
+**Regla narrativa establecida por la creadora:** **cada capítulo ofrece dos caminos de historia**. El jugador escucha o lee un diálogo, elige cómo responder y **continúa por la historia correspondiente a su decisión**. No es solo una frase diferente: la elección debe repercutir en la misión y en sus consecuencias.
 
-El objetivo es conseguir profundidad sin abrumar al jugador con menús complicados.
+- **Camino A:** una respuesta que abre una línea de acontecimientos.
+- **Camino B:** otra respuesta que abre una línea distinta.
+- **Continuidad:** el recorrido escogido se recuerda al avanzar al siguiente capítulo; puede afectar relaciones, aliados, recursos y situaciones futuras.
+
+**Ejemplo ilustrativo, no canon:** al llegar a una civilización desconocida, el grupo podría elegir entre buscar una audiencia diplomática inmediatamente o ayudar primero a sus habitantes para ganarse su confianza. Ambas decisiones iniciarían escenas y objetivos diferentes, sin imponer que una sea la respuesta «correcta».
+
+La implementación exacta de los diálogos, los finales de cada rama y cuándo vuelven a cruzarse las historias se decidirá durante el diseño. **Las elecciones del jugador deben importar.**
 
 ## Misiones y mapa
 
