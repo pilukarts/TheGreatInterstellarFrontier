@@ -18,6 +18,14 @@ Aquí encontrarás páginas sobre el éxodo de la humanidad, Frontier Ark, sus s
 
 La enciclopedia está preparada **sin desvelar las grandes sorpresas de la historia**.
 
+## 🕹️ Primer prototipo jugable · 2.5D
+
+**¡Ya hay una primera prueba para jugar en el navegador!** Incluye selección de **cinco personajes entre ocho**, **dos historias elegidas por diálogo**, movimiento de unidades en un tablero isométrico y combate mediante combinaciones de gemas.
+
+**[Abrir el prototipo 01](prototype/index.html)** · [Instrucciones para jugar](prototype/README.md)
+
+Para ejecutarlo, descarga el archivo HTML desde GitHub (**Download raw file**) y ábrelo con un navegador. La vista previa de GitHub muestra el código, no el juego. **Es una demostración temprana y todavía requiere pruebas manuales**; no representa el juego completo.
+
 ## 🎮 Un universo en construcción
 
 *The Great Interstellar Frontier* combina ideas de **estrategia, construcción, exploración, rescate y aventura narrativa**. La intención es que las decisiones tengan consecuencias visibles y que las personas de las naves sean tan importantes como la tecnología.
@@ -37,6 +45,6 @@ Consulta la sección [Cómo se juega](wiki/EXPLORACION_Y_JUGABILIDAD.md) para di
 
 Los archivos de **docs/** son borradores de trabajo del desarrollo y **pueden contener revelaciones narrativas**. No están preparados como lectura pública sin spoilers.
 
-Este repositorio reúne **documentación y arte conceptual**, no una versión jugable completa del videojuego.
+Este repositorio reúne **documentación, arte conceptual y un primer prototipo independiente**. Todavía no existe una versión completa del videojuego.
 
 **© Pilukarts Studio · The Great Interstellar Frontier**
