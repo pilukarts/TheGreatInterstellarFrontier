@@ -10,6 +10,12 @@ Trabaja con enorme dedicación y **pilota personalmente una nave de reparaciones
 
 Su nombre y su personalidad definitiva aún están por decidir.
 
+## Un elenco amplio: el jugador escoge a sus cinco
+
+**Canon de diseño confirmado:** habrá **más de cinco personajes disponibles**. Antes de vivir las misiones, el jugador formará **un escuadrón activo de cinco**, eligiendo a sus integrantes de entre un grupo más numeroso. Los cinco visitantes de una escena son solo una de las muchas posibles composiciones de equipo.
+
+**Por definir:** cuántos integrantes tendrá la plantilla completa, sus perfiles y habilidades, y cómo evolucionará la disponibilidad de compañeros durante las alianzas y expediciones. No se considera que todos los personajes enumerados a continuación sean automáticamente seleccionables o combatientes.
+
 ## Compañeros de misión
 
 - **Adrián Vega:** superintendente relacionado con la seguridad y la integridad de la ciudad-nave.
