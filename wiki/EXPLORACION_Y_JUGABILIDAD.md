@@ -43,10 +43,12 @@ La implementación exacta de los diálogos, los finales de cada rama y cuándo v
 
 **Objetivo de diseño:** permitir que cada persona personalice su personaje y viva una partida que conserve sus decisiones. Para hacerlo viable, las historias pueden **ramificarse y volver a encontrarse**, manteniendo las consecuencias.
 
-## El primer prototipo
+## Primer prototipo jugable: El Reino de las Burbujas
 
-Una versión breve de **Operación Esperanza** podría servir para comprobar el ciclo de rescate, decisión, regreso y reconstrucción antes de ampliar la galaxia.
+Ya existe un **prototipo independiente de prueba** para navegador: [Frontier · Prototipo 01](../prototype/index.html) · [Cómo jugar](../prototype/README.md).
 
-**Por confirmar:** perspectiva de cámara, control directo de personajes, combate, multijugador, sistemas económicos, capacidades técnicas y escala final.
+Esta pequeña demo usa un tablero **2.5D isométrico** con movimiento animado de unidades, un escuadrón seleccionable de **cinco entre ocho personajes provisionales**, combinaciones de gemas para obtener energía, combate y **dos caminos narrativos determinados por el diálogo**. Es una comprobación temprana de la jugabilidad, no el juego completo. El código se ha verificado mediante pruebas de lógica; **quedan pendientes las pruebas visuales y de controles en navegadores y móviles reales**.
+
+**Operación Esperanza** sigue siendo una posible misión de rescate para una fase posterior. **Por confirmar:** perspectiva definitiva, amplitud de las mecánicas, multijugador, economía, sistema de capítulos y escala final.
 
 [Consultar el glosario →](GLOSARIO.md)
