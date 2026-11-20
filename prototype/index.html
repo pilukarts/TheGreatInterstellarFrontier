@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>The Great Interstellar Frontier · Prototipo 01</title>
+<style>
+:root{color-scheme:dark;--bg:#061321;--surface:#11263a;--surface2:#17344c;--line:#3e6e87;--ink:#ebf8ff;--muted:#9ec3d2;--gold:#f3cc82;--cyan:#6ad7ed;--purple:#b59bf8;--green:#8fe2c5}
+*{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45;background:radial-gradient(ellipse at 75% 0%,#1c3b68 0%,transparent 48%),radial-gradient(ellipse at 0% 60%,#321f57 0%,transparent 35%),var(--bg)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.3;background-image:radial-gradient(#d5faff 1px,transparent 1px);background-size:72px 79px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #ffdb8d;outline-offset:3px}
+button:disabled{cursor:not-allowed;opacity:.45}.shell{position:relative;max-width:1160px;margin:0 auto;padding:22px 18px 80px}
+header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:5px 0 18px;border-bottom:1px solid #346078}
+.brand{font-size:11px;letter-spacing:.25em;font-weight:850;color:var(--gold)}h1{font-size:clamp(26px,4vw,48px);line-height:1.07;letter-spacing:-.04em;margin:12px 0 5px;max-width:730px}.subtitle{font-size:14px;color:var(--muted);margin:0}
+.pill{padding:7px 12px;border:1px solid #6385a0;border-radius:999px;font-size:11px;color:#c1dce9;white-space:nowrap}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 27px}.step{font-size:12px;background:#122d43;border:1px solid #38586c;border-radius:999px;padding:7px 12px;color:#86b3c8}.step.active{color:#081c2a;background:var(--cyan);border-color:var(--cyan);font-weight:850}
+h2{font-size:clamp(22px,3vw,31px);line-height:1.15;margin:0 0 9px}h3{margin:0 0 8px;font-size:16px}p{margin:8px 0 14px;color:var(--muted)}
+.panel{background:#0d2335e8;border:1px solid #35617a;border-radius:20px;padding:clamp(17px,3vw,27px);box-shadow:0 16px 35px #0003}
+.kicker{text-transform:uppercase;letter-spacing:.17em;color:var(--gold);font-size:10px;font-weight:800;margin-bottom:10px}
+.action{padding:13px 20px;border-radius:12px;border:1px solid #5f91ab;background:linear-gradient(145deg,#175375,#133e5e);color:#eefdff;font-weight:750;transition:transform .15s,filter .15s}.action:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.13)}.action.primary{background:linear-gradient(135deg,#ffd992,#edac5b);border:0;color:#1c2632}.action.secondary{background:#172e42}.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:23px}.muted{color:#8cb4c5;font-size:12px}.tiny{font-size:11px}.accent{color:var(--gold)}
+.roster{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-top:19px}.recruit{border:1px solid #365a70;border-radius:15px;padding:14px 7px;background:#10283b;color:#e4f5ff;min-height:140px;text-align:center;transition:background .15s,transform .15s,border-color .15s}
+.recruit:hover{transform:translateY(-2px)}.recruit.on{border:2px solid #f2c782;background:linear-gradient(135deg,#284c62,#1a3047);box-shadow:inset 0 0 25px #59a8c319}.recruit .avatar{font-size:35px;display:block;margin-bottom:7px}.recruit strong{display:block;font-size:13px}.recruit small{display:block;font-size:10px;color:#a8cddd;margin-top:5px}.recruit .tag{font-size:10px;color:var(--gold);margin-top:7px}
+.meter{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:19px;padding-top:14px;border-top:1px solid #2e5268}.meter strong{color:var(--gold)}.side-note{max-width:300px}
+.chapter-art{position:relative;min-height:245px;overflow:hidden;border-radius:16px;background:radial-gradient(circle at 73% 25%,#8ec5ffbb 0%,#426ba8 17%,transparent 18%),linear-gradient(145deg,#192f67,#573d78 58%,#12334c);margin-bottom:21px}
+.chapter-art:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 45% 78%,#a7eacc3d,transparent 40%)}
+.island{position:absolute;top:43%;left:9%;width:78%;height:22%;border-radius:50%;border:7px solid #a9f0faac;background:linear-gradient(180deg,#77bba1,#365c67);transform:rotate(-9deg);box-shadow:0 19px 35px #081b3a}
+.bubble{position:absolute;top:12%;left:16%;height:79%;width:65%;border:3px solid #bdfaffb8;border-radius:50%;box-shadow:inset 0 0 45px #b4f7ff2c,0 0 36px #a9edff4f}
+.castle{position:absolute;left:38%;top:23%;font-size:81px;filter:drop-shadow(0 9px 10px #041427)}.squadart{position:absolute;bottom:5%;left:8%;font-size:45px;letter-spacing:-10px;filter:drop-shadow(0 5px 10px #07121f)}
+.dialog{border-left:4px solid var(--gold);padding:10px 17px;background:#21344a;border-radius:0 12px 12px 0;margin:18px 0 16px}.dialog strong{color:var(--gold);font-size:12px}.dialog p{margin:5px 0;color:#e6f3fa}
+.branch-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.branch{background:#122f46;border:1px solid #42738c;border-radius:16px;padding:18px;text-align:left;color:white;min-height:134px;transition:transform .15s,background .15s}.branch:hover{transform:translateY(-3px);background:#1c4560}.branch span{display:block;font-size:11px;color:#e9c786;margin-bottom:8px}.branch strong{display:block;font-size:17px}.branch small{color:#b6d5e4;display:block;margin-top:7px}
+.battle-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(265px,1fr);gap:17px;align-items:start}
+.arena{min-width:0}.hud{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.hud span{border:1px solid #37586f;background:#0f3044;border-radius:10px;padding:8px 11px;font-size:12px}.hud b{color:var(--gold)}.map-wrap{background:radial-gradient(ellipse at 50% 43%,#23556c 0%,#152b44 45%,#081d30 90%);border:1px solid #315c73;border-radius:16px;overflow:hidden}
+#battleMap{display:block;width:100%;height:auto;min-height:285px;touch-action:manipulation;user-select:none}.terrain{cursor:pointer}.terrain:hover{filter:brightness(1.18)}.unit{transition:transform .37s ease;cursor:pointer;transform-origin:0 0}.unit text{font-family:"Segoe UI Emoji",system-ui,sans-serif}.unit.selected .halo{stroke:var(--gold);stroke-width:4}.unit .hitbox{fill:transparent}.legend{font-size:12px;color:#b2d4e1;margin:9px 0}.journal{min-height:67px;background:#091f2f;padding:11px 12px;border-radius:12px;color:#d4edf8;font-size:13px;line-height:1.5;border:1px solid #2d5267}
+.gem-panel{background:#11293b;border:1px solid #355c75;border-radius:17px;padding:15px}.gem-panel h3{margin-bottom:4px}.gems{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;margin-top:14px;max-width:440px}.gem{border:1px solid #64889c;background:linear-gradient(145deg,#31546c,#123348);aspect-ratio:1;border-radius:11px;padding:0;font-size:clamp(17px,3vw,24px);box-shadow:inset 0 1px #ffffff3b,0 4px 0 #06192d;color:#fff;text-shadow:0 2px 3px #0006;transition:transform .1s,outline .1s}.gem:active{transform:translateY(2px);box-shadow:none}.gem.marked{outline:3px solid #fff1a8;outline-offset:-3px;transform:scale(1.06)}.gem.c0{color:#ff757e}.gem.c1{color:#7be0ff}.gem.c2{color:#7eecc6}.gem.c3{color:#d1a1ff}.gem.c4{color:#ffdb85}
+#ability{min-height:38px}.tip{color:#a9d1e4;font-size:12px}.success{color:var(--green)}.warning{color:var(--gold)}
+.final-hero{font-size:66px;text-align:center;line-height:1.3;margin:8px}.outcome{font-size:16px;color:#d4e8f2}.results{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.results div{background:#163348;border:1px solid #3e657e;border-radius:12px;padding:15px}.results small{display:block;color:#9abed0}.results strong{font-size:18px;color:#f1d8a2}
+footer{border-top:1px solid #2f5266;margin-top:34px;padding-top:14px;color:#82adbf;font-size:12px}
+[hidden]{display:none!important}
+@media(max-width:800px){.battle-grid{grid-template-columns:1fr}.gem-panel{max-width:520px}.roster{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:550px){.shell{padding:15px 11px 40px}.roster{grid-template-columns:repeat(2,minmax(0,1fr))}.recruit{min-height:123px}.branch-list{grid-template-columns:1fr}.steps{gap:5px}.step{padding:6px 9px;font-size:10px}header{flex-direction:column}.battle-grid{gap:12px}.map-wrap{margin:0 -5px}#battleMap{min-height:250px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header>
+<div><div class="brand">PILUKARTS STUDIO · PROTOTIPO 01</div><h1>THE GREAT<br>INTERSTELLAR FRONTIER</h1><p class="subtitle">El Reino de las Burbujas · Aventura táctica 2.5D</p></div>
+<div class="pill">🪐 Demostración jugable · sin spoilers</div>
+</header>
+<nav class="steps" aria-label="Progreso de la misión">
+<span class="step active" data-step="0">01 · Escuadrón</span><span class="step" data-step="1">02 · Diálogo</span><span class="step" data-step="2">03 · Combate</span><span class="step" data-step="3">04 · Consecuencias</span>
+</nav>
+<section class="panel" id="selectScreen">
+<div class="kicker">Preparación de expedición</div>
+<h2>Escoge a los cinco que viajarán al planeta</h2>
+<p>Hay ocho perfiles de prueba. Puedes llevar cinco; cada uno se mueve por el terreno y tiene una habilidad especial. Tu escuadrón inicial ya está seleccionado.</p>
+<div class="roster" id="roster"></div>
+<div class="meter"><div><strong id="count">5 / 5</strong><br><span class="muted">miembros elegidos</span></div><div class="side-note muted">Los nombres, las clases y el planeta son de prueba: no sustituyen los diseños definitivos de la creadora.</div></div>
+<div class="actions"><button class="action primary" id="goStory">🚀 Comenzar capítulo</button><span class="muted">Sin instalaciones, cuentas ni conexiones externas.</span></div>
+</section>
+<section class="panel" id="storyScreen" hidden>
+<div class="kicker">Capítulo de demostración · Dos historias posibles</div><h2>Los cinco visitantes</h2>
+<div class="chapter-art" role="img" aria-label="Ilustración de islas bajo una gran burbuja protectora">
+<div class="island"></div><div class="bubble"></div><div class="castle">🏰</div><div class="squadart">🧑‍🚀👩‍🚀🧑‍🚀</div>
+</div>
+<p>La nave de reconocimiento se aproxima a un planeta de islas suspendidas dentro de inmensas burbujas. Los habitantes observan a los visitantes y se quedan petrificados.</p>
+<div class="dialog"><strong>MAGO DEL POBLADO</strong><p>«Vuestro aspecto nos es desconocido. ¿Qué buscáis en nuestras islas?»</p></div>
+<p><strong>Elige el diálogo.</strong> No es una respuesta decorativa: cada decisión activa un objetivo diferente.</p>
+<div class="branch-list">
+<button class="branch" id="branchA"><span>HISTORIA A · DIPLOMACIA</span><strong>«Solicitamos audiencia con el rey»</strong><small>Busca una salida negociada. Podrás dialogar tras detener al primer centinela.</small></button>
+<button class="branch" id="branchB"><span>HISTORIA B · RESCATE</span><strong>«Antes ayudaremos a vuestro pueblo»</strong><small>Protege el poblado frente a las amenazas y gana la confianza de sus habitantes.</small></button>
+</div>
+<div class="actions"><button class="action secondary" id="backRoster">← Cambiar el equipo</button></div>
+</section>
+<section id="battleScreen" hidden>
+<div class="kicker">Misión activa · Escaramuza táctica</div><h2 id="battleTitle">Zona de las islas</h2>
+<p id="missionText"></p>
+<div class="battle-grid">
+<div class="arena">
+<div class="hud" aria-live="polite"><span>⚡ Energía <b id="energy">5</b></span><span>🤝 Confianza <b id="trust">0</b></span><span>🛡️ Guardianes hostiles <b id="foes">2</b></span></div>
+<div class="map-wrap">
+<svg id="battleMap" viewBox="0 0 700 400" role="group" aria-label="Campo de batalla en perspectiva 2.5D. Selecciona un soldado y luego una casilla contigua o un enemigo.">
+<defs><linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#438c8d"/><stop offset="1" stop-color="#20536e"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7"/></filter></defs>
+<g id="ground"></g><g id="units"></g></svg>
+</div>
+<p class="legend">Toca un integrante para seleccionarlo. Toca una casilla iluminada para moverlo, o un enemigo al alcance para atacar.</p>
+<div class="journal" id="log" role="status" aria-live="polite">Prepara tu próximo movimiento.</div>
+<div class="actions"><button id="skillBtn" class="action secondary" disabled>✨ Habilidad del elegido</button><button id="negotiateBtn" class="action primary" hidden>🤝 Negociar con el centinela</button></div>
+</div>
+<aside class="gem-panel">
+<div class="kicker">Combate con gemas</div><h3>💎 Combina tres colores</h3>
+<p class="tip">Toca dos gemas vecinas para intercambiarlas. Una fila o columna de tres iguales genera energía para mover y atacar.</p>
+<div id="gems" class="gems" role="group" aria-label="Tablero interactivo de gemas"></div>
+<p class="tip" id="gemMessage" aria-live="polite">Intercambia dos gemas adyacentes.</p>
+<div class="tip">Mover: <strong>1 ⚡</strong> · Atacar: <strong>2 ⚡</strong> · Habilidad: <strong>1 uso por personaje</strong>.</div>
+</aside>
+</div>
+</section>
+<section class="panel" id="endScreen" hidden>
+<div class="kicker">Fin del capítulo de demostración</div><div class="final-hero" id="endingIcon">🌅</div>
+<h2 id="endingTitle">Misión completada</h2><p class="outcome" id="endingText"></p>
+<div class="results"><div><small>Tu historia</small><strong id="endingBranch"></strong></div><div><small>Escuadrón</small><strong id="endingTeam"></strong></div><div><small>Confianza del poblado</small><strong id="endingTrust"></strong></div><div><small>Registro</small><strong>Guardado en este navegador</strong></div></div>
+<div class="actions"><button class="action primary" id="again">↻ Volver a jugar</button><button class="action secondary" id="retryStory">Cambiar la historia</button></div>
+</section>
+<footer>© Pilukarts Studio · Prototipo de prueba. Personajes, diálogos y escenarios provisionales. No revela los misterios principales de la historia.</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var roster=[
+{id:"soldado",name:"Soldado",icon:"🛡️",role:"Defensa",atk:3,range:1,steps:1,skill:"Coraje: +1 energía"},
+{id:"exploradora",name:"Exploradora",icon:"🧭",role:"Exploración",atk:2,range:2,steps:2,skill:"Rastreo: +2 energía"},
+{id:"ingeniera",name:"Ingeniera",icon:"🔧",role:"Reparación",atk:2,range:1,steps:1,skill:"Recarga: +3 energía"},
+{id:"medica",name:"Médica",icon:"🩺",role:"Sanación",atk:1,range:1,steps:1,skill:"Botiquín: cura al grupo"},
+{id:"piloto",name:"Piloto",icon:"🚀",role:"Movilidad",atk:2,range:2,steps:2,skill:"Maniobra: +2 energía"},
+{id:"guardian",name:"Guardiana",icon:"🛡️",role:"Protección",atk:2,range:1,steps:1,skill:"Escudos: +1 vida al grupo"},
+{id:"diplomatica",name:"Diplomática",icon:"🤝",role:"Negociación",atk:1,range:1,steps:1,skill:"Acuerdo: +2 confianza"},
+{id:"tecnico",name:"Técnico",icon:"🤖",role:"Sistemas",atk:2,range:2,steps:1,skill:"Baterías: +3 energía"}
+];
+var initial=["soldado","exploradora","ingeniera","medica","piloto"];
+var selected=initial.slice(),branch=null,friends=[],enemies=[],chosen=null,energy=5,trust=0,grid=[],gemSelection=-1,phase=0,finished=false,lastResult=null;
+var W=6,H=5,GC=6,GR=5,colors=["🔴","🔵","🟢","🟣","🟡"];
+function el(id){return document.getElementById(id);}
+function show(n){phase=n;["selectScreen","storyScreen","battleScreen","endScreen"].forEach(function(id,i){el(id).hidden=i!==n;});document.querySelectorAll("[data-step]").forEach(function(x){x.classList.toggle("active",Number(x.getAttribute("data-step"))===n);});window.scrollTo({top:0,behavior:"smooth"});}
+function escaped(t){return String(t).replace(/[&<>"]/g,function(x){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[x];});}
+function renderRoster(){
+el("roster").innerHTML=roster.map(function(r){var active=selected.indexOf(r.id)>=0;return '<button type="button" data-pick="'+r.id+'" class="recruit '+(active?"on":"")+'" aria-pressed="'+active+'"><span class="avatar">'+r.icon+'</span><strong>'+r.name+'</strong><small>'+r.role+'</small><div class="tag">'+(active?"✓ EN EQUIPO":"＋ AÑADIR")+'</div></button>';}).join("");
+el("count").textContent=selected.length+" / 5";
+el("goStory").disabled=selected.length!==5;
+}
+el("roster").addEventListener("click",function(e){var b=e.target.closest("[data-pick]");if(!b)return;var id=b.getAttribute("data-pick"),pos=selected.indexOf(id);if(pos>=0){selected.splice(pos,1);}else if(selected.length<5){selected.push(id);}renderRoster();});
+el("goStory").addEventListener("click",function(){if(selected.length===5)show(1);});
+el("backRoster").addEventListener("click",function(){show(0);});
+el("branchA").addEventListener("click",function(){begin("A");});
+el("branchB").addEventListener("click",function(){begin("B");});
+function begin(which){
+branch=which;finished=false;energy=5;trust=which==="A"?1:2;gemSelection=-1;chosen=null;lastResult=null;
+friends=selected.map(function(id,i){var r=roster.find(function(p){return p.id===id;});return {id:r.id,name:r.name,icon:r.icon,x:i+((i===4)?1:0),y:i===4?3:4,hp:6,maxhp:6,atk:r.atk,range:r.range,steps:r.steps,used:false};});
+enemies=[{id:"e1",name:"Centinela A",icon:"👾",x:1,y:0,hp:which==="A"?4:5,maxhp:which==="A"?4:5,atk:1,range:1},{id:"e2",name:"Centinela B",icon:"🤖",x:4,y:0,hp:which==="A"?4:5,maxhp:which==="A"?4:5,atk:1,range:1}];
+grid=makeGems();el("battleTitle").textContent=branch==="A"?"Ruta A · Audiencia real":"Ruta B · Proteger al poblado";
+el("missionText").textContent=branch==="A"?"Objetivo: desactivar al primer centinela y tratar de negociar con el segundo. También puedes superar el encuentro por combate.":"Objetivo: apartar a los dos centinelas hostiles y proteger las islas. Los habitantes observan cómo los ayudas.";
+show(2);drawGems();renderBattle(true);notice(branch==="A"?"El mago permite un primer intento de audiencia. Detén la amenaza y busca un acuerdo.":"Los aldeanos necesitan ayuda. Protege el poblado; cada decisión importa.");}
+function xy(c,r){return {x:320+(c-r)*54,y:72+(c+r)*27};}
+function dist(a,b){return Math.abs(a.x-b.x)+Math.abs(a.y-b.y);}
+function units(){return friends.filter(function(x){return x.hp>0;}).concat(enemies.filter(function(x){return x.hp>0;}));}
+function occupancy(x,y){return units().find(function(u){return u.x===x&&u.y===y;})||null;}
+function selectedUnit(){return friends.find(function(u){return u.id===chosen&&u.hp>0;})||null;}
+function terrainSvg(){
+var s='<ellipse cx="330" cy="270" rx="290" ry="98" fill="#062335" opacity=".55" filter="url(#glow)"/>';
+for(var r=0;r<H;r++)for(var c=0;c<W;c++){
+var p=xy(c,r),cell=occupancy(c,r),u=selectedUnit(),near=u&&dist(u,{x:c,y:r})<=u.steps&&dist(u,{x:c,y:r})>0&&!cell,attack=u&&cell&&enemies.includes(cell)&&dist(u,cell)<=u.range;
+var fill=near?"#315f64":attack?"#82535d":(r+c)%2===0?"#2f6475":"#28556e";
+var top=p.x+","+(p.y-23)+" "+(p.x+52)+","+p.y+" "+p.x+","+(p.y+23)+" "+(p.x-52)+","+p.y;
+var right=p.x+","+(p.y+23)+" "+(p.x+52)+","+p.y+" "+(p.x+52)+","+(p.y+9)+" "+p.x+","+(p.y+32);
+s+='<g data-cell="'+c+','+r+'" class="terrain"><polygon points="'+right+'" fill="#163f50" stroke="#152f3a" stroke-width="1.1"/><polygon points="'+top+'" fill="'+fill+'" stroke="'+(near?"#abe6b3":attack?"#ffbf85":"#49788a")+'" stroke-width="'+(near||attack?2.2:1.2)+'"/>';
+if(near)s+='<circle cx="'+p.x+'" cy="'+p.y+'" r="6" fill="#d3ffca" opacity=".8"/>';if(attack)s+='<circle cx="'+p.x+'" cy="'+p.y+'" r="19" fill="none" stroke="#ffc87c" stroke-width="2.3" stroke-dasharray="5 4"/>';
+s+='</g>';
+}
+return s;
+}
+function actorSvg(u,isEnemy){var cls=isEnemy?"enemy":"friend";return '<g id="unit-'+u.id+'" class="unit '+cls+'" data-unit="'+u.id+'" data-cell="'+u.x+','+u.y+'"><ellipse cx="0" cy="2" rx="22" ry="9" fill="#031323" opacity=".6"/><circle class="halo" cx="0" cy="-22" r="24" fill="'+(isEnemy?"#63455e":"#1e496c")+'" stroke="'+(isEnemy?"#fa9c99":"#7bdbf1")+'" stroke-width="2.5"/><text x="0" y="-11" text-anchor="middle" font-size="25">'+u.icon+'</text><rect x="-20" y="-52" width="40" height="7" rx="3.5" fill="#08222b"/><rect class="hpbar" x="-19" y="-51" width="'+(38*u.hp/u.maxhp)+'" height="5" rx="2" fill="'+(isEnemy?"#ff927f":"#8ceac5")+'"/><text x="0" y="-59" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">'+(isEnemy?"HOSTIL":u.name.toUpperCase())+'</text><circle class="hitbox" cx="0" cy="-24" r="29"/></g>';}
+function renderBattle(force){
+if(phase!==2)return;
+el("ground").innerHTML=terrainSvg();
+var layer=el("units"),all=units(),liveIds=all.map(function(u){return "unit-"+u.id;});
+Array.from(layer.children).forEach(function(node){if(liveIds.indexOf(node.id)<0)node.remove();});
+all.slice().sort(function(a,b){return (a.x+a.y)-(b.x+b.y);}).forEach(function(u){
+var node=el("unit-"+u.id),isEnemy=enemies.indexOf(u)>=0;
+if(!node){layer.insertAdjacentHTML("beforeend",actorSvg(u,isEnemy));node=el("unit-"+u.id);if(!force){node.style.opacity="0";requestAnimationFrame(function(){node.style.opacity="1";});}}
+var p=xy(u.x,u.y);node.style.transform="translate("+p.x+"px,"+p.y+"px)";node.setAttribute("data-cell",u.x+","+u.y);node.classList.toggle("selected",chosen===u.id);var bar=node.querySelector(".hpbar");if(bar)bar.setAttribute("width",38*u.hp/u.maxhp);
+});
+el("energy").textContent=energy;el("trust").textContent=trust;el("foes").textContent=enemies.filter(function(e){return e.hp>0;}).length;
+var u=selectedUnit(),b=el("skillBtn");b.disabled=!u||u.used;b.textContent=u?"✨ "+roster.find(function(p){return p.id===u.id;}).skill+(u.used?" (usado)":""):"✨ Selecciona un integrante";
+el("negotiateBtn").hidden=!(branch==="A"&&enemies.filter(function(e){return e.hp>0;}).length===1&&trust>=2);
+}
+function notice(t){el("log").textContent=t;}
+el("battleMap").addEventListener("click",function(e){
+if(finished||phase!==2)return;
+var target=e.target.closest("[data-cell]");if(!target)return;
+var parts=target.getAttribute("data-cell").split(",").map(Number),c=parts[0],r=parts[1];
+var occ=occupancy(c,r),u=selectedUnit();
+if(occ&&friends.indexOf(occ)>=0){chosen=occ.id;renderBattle(false);notice("Seleccionado: "+occ.name+". Mueve a una casilla contigua o ataca a un enemigo al alcance.");return;}
+if(!u){notice("Selecciona primero uno de tus cinco integrantes.");return;}
+if(occ&&enemies.indexOf(occ)>=0){
+if(dist(u,occ)>u.range){notice(u.name+" todavía está lejos de ese enemigo. Acerca a tu unidad.");return;}
+if(energy<2){notice("Necesitas 2 ⚡ para atacar. ¡Haz combinaciones de gemas!");return;}
+energy-=2;occ.hp=Math.max(0,occ.hp-u.atk);var knocked=occ.hp===0;if(knocked){trust++;}notice(u.name+" ha detenido "+occ.name+" (daño "+u.atk+"). "+(knocked?"¡Centinela desactivado sin bajas!":"+String(occ.hp)+" de vida restante."));
+if(!knocked){u.hp=Math.max(1,u.hp-1);}renderBattle(false);maybeEnd();return;
+}
+if(occ){notice("Esa casilla ya está ocupada.");return;}
+if(dist(u,{x:c,y:r})>u.steps||dist(u,{x:c,y:r})===0){notice("Movimiento demasiado lejano. "+u.name+" se desplaza hasta "+u.steps+" casillas por acción.");return;}
+if(energy<1){notice("Necesitas 1 ⚡ para moverte. Combina gemas.");return;}
+energy--;u.x=c;u.y=r;notice(u.name+" avanza por el terreno. ¡El movimiento es real!");renderBattle(false);
+});
+el("skillBtn").addEventListener("click",function(){
+var u=selectedUnit();if(!u||u.used)return;u.used=true;var msg="";
+switch(u.id){
+case "soldado":energy+=1;msg="El Soldado reorganiza las reservas: +1 energía.";break;
+case "exploradora":energy+=2;msg="La Exploradora descubre un atajo: +2 energía.";break;
+case "ingeniera":energy+=3;msg="La Ingeniera recarga los equipos: +3 energía.";break;
+case "medica":friends.forEach(function(x){x.hp=Math.min(x.maxhp,x.hp+2);});msg="La Médica atiende a los cinco compañeros: +2 salud.";break;
+case "piloto":energy+=2;msg="El Piloto ejecuta una maniobra: +2 energía.";break;
+case "guardian":friends.forEach(function(x){x.hp=Math.min(x.maxhp,x.hp+1);});msg="La Guardiana protege al equipo: +1 salud.";break;
+case "diplomatica":trust+=2;msg="La Diplomática gana confianza: +2.";break;
+case "tecnico":energy+=3;msg="El Técnico recupera baterías: +3 energía.";break;
+}
+notice(msg);renderBattle(false);
+});
+el("negotiateBtn").addEventListener("click",function(){
+if(branch==="A"&&enemies.filter(function(e){return e.hp>0;}).length===1&&trust>=2){trust+=2;end(true);}
+});
+function maybeEnd(){if(!enemies.some(function(e){return e.hp>0;}))end(false);}
+function end(diplomacy){
+if(finished)return;finished=true;
+lastResult={branch:branch,team:selected.slice(),trust:trust,peaceful:!!diplomacy};
+try{localStorage.setItem("frontier_prototype_01",JSON.stringify(lastResult));}catch(e){}
+el("endingIcon").textContent=diplomacy?"🤝":branch==="B"?"🏘️":"🌅";
+el("endingTitle").textContent=diplomacy?"Una paz negociada":branch==="B"?"El poblado está a salvo":"El camino hacia el rey";
+el("endingText").textContent=diplomacy?"La petición de audiencia abrió una alternativa al combate. Los habitantes aceptan escuchar a los visitantes. La aventura continuará en otra misión.":branch==="B"?"Tus cinco exploradores han protegido las islas y ganado la gratitud de sus habitantes. Ahora pueden comenzar las reparaciones y nuevas alianzas.":"Los centinelas se han retirado. El mago considera conceder a la expedición una audiencia; queda mucho por descubrir.";
+el("endingBranch").textContent=branch==="A"?"A · Diplomacia":"B · Rescate";
+el("endingTeam").textContent=selected.length+" integrantes";el("endingTrust").textContent=trust+" puntos";show(3);
+}
+el("again").addEventListener("click",function(){selected=initial.slice();branch=null;renderRoster();show(0);});
+el("retryStory").addEventListener("click",function(){show(1);});
+function matched(a){
+var mark=new Set();
+for(var y=0;y<GR;y++)for(var x=0;x<GC;x++){
+var id=y*GC+x;
+if(x<=GC-3&&a[id]===a[id+1]&&a[id]===a[id+2]){
+var z=x;while(z<GC&&a[y*GC+z]===a[id]){mark.add(y*GC+z);z++;}}
+if(y<=GR-3&&a[id]===a[id+GC]&&a[id]===a[id+2*GC]){
+var v=y;while(v<GR&&a[v*GC+x]===a[id]){mark.add(v*GC+x);v++;}}
+}
+return Array.from(mark);
+}
+function swap(a,i,j){var t=a[i];a[i]=a[j];a[j]=t;}
+function possible(a){for(var i=0;i<a.length;i++){var x=i%GC,y=Math.floor(i/GC);for(var j of [x<GC-1?i+1:-1,y<GR-1?i+GC:-1]){if(j<0)continue;swap(a,i,j);var yes=matched(a).length>0;swap(a,i,j);if(yes)return true;}}return false;}
+function makeGems(){
+for(var attempt=0;attempt<250;attempt++){
+var a=[];
+for(var i=0;i<GC*GR;i++){
+var x=i%GC,y=Math.floor(i/GC),candidates=[0,1,2,3,4].filter(function(c){return !(x>=2&&a[i-1]===c&&a[i-2]===c)&&!(y>=2&&a[i-GC]===c&&a[i-2*GC]===c);});
+a.push(candidates[Math.floor(Math.random()*candidates.length)]);
+}
+if(possible(a))return a;
+}
+return [1,1,2,3,4,0,2,2,1,0,3,4,3,4,0,1,2,0,4,3,2,4,1,3,0,1,3,2,4,2];
+}
+function drawGems(){
+el("gems").innerHTML=grid.map(function(v,i){return '<button type="button" class="gem c'+v+(gemSelection===i?" marked":"")+'" data-gem="'+i+'" aria-label="Gema '+["roja","azul","verde","violeta","amarilla"][v]+', casilla '+(i+1)+'">'+colors[v]+'</button>';}).join("");
+}
+el("gems").addEventListener("click",function(e){
+if(finished)return;var b=e.target.closest("[data-gem]");if(!b)return;
+var j=Number(b.getAttribute("data-gem"));
+if(gemSelection<0){gemSelection=j;drawGems();el("gemMessage").textContent="Ahora selecciona una gema vecina.";return;}
+var i=gemSelection;gemSelection=-1;
+if(i===j){drawGems();return;}
+var x=i%GC,y=Math.floor(i/GC),xx=j%GC,yy=Math.floor(j/GC);
+if(Math.abs(x-xx)+Math.abs(y-yy)!==1){el("gemMessage").textContent="Selecciona gemas contiguas, horizontal o verticalmente.";gemSelection=j;drawGems();return;}
+swap(grid,i,j);
+var first=matched(grid);
+if(!first.length){swap(grid,i,j);el("gemMessage").textContent="Esa combinación no forma tres iguales. Prueba otra.";drawGems();return;}
+var cleared=0,chain=0;
+while(chain<16){
+var hits=matched(grid);if(!hits.length)break;
+cleared+=hits.length;chain++;
+var flags=new Set(hits);
+for(var col=0;col<GC;col++){
+var stay=[];for(var row=GR-1;row>=0;row--){var idx=row*GC+col;if(!flags.has(idx))stay.push(grid[idx]);}
+for(var row2=GR-1,at=0;row2>=0;row2--,at++){grid[row2*GC+col]=at<stay.length?stay[at]:Math.floor(Math.random()*5);}
+}
+}
+energy+=Math.max(2,2*Math.floor(cleared/3));if(!possible(grid)||matched(grid).length)grid=makeGems();
+el("gemMessage").textContent="¡Combo! "+cleared+" gemas, "+chain+" cadena(s). +"+Math.max(2,2*Math.floor(cleared/3))+" ⚡";
+drawGems();renderBattle(false);
+});
+renderRoster();show(0);
+})();
+</script>
+</body>
+</html>
