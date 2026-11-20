@@ -185,7 +185,7 @@ if(!u){notice("Selecciona primero uno de tus cinco integrantes.");return;}
 if(occ&&enemies.indexOf(occ)>=0){
 if(dist(u,occ)>u.range){notice(u.name+" todavía está lejos de ese enemigo. Acerca a tu unidad.");return;}
 if(energy<2){notice("Necesitas 2 ⚡ para atacar. ¡Haz combinaciones de gemas!");return;}
-energy-=2;occ.hp=Math.max(0,occ.hp-u.atk);var knocked=occ.hp===0;if(knocked){trust++;}notice(u.name+" ha detenido "+occ.name+" (daño "+u.atk+"). "+(knocked?"¡Centinela desactivado sin bajas!":"+String(occ.hp)+" de vida restante."));
+energy-=2;occ.hp=Math.max(0,occ.hp-u.atk);var knocked=occ.hp===0;if(knocked){trust++;}notice(u.name+" ha detenido "+occ.name+" (daño "+u.atk+"). "+(knocked?"¡Centinela desactivado sin bajas!":String(occ.hp)+" de vida restante."));
 if(!knocked){u.hp=Math.max(1,u.hp-1);}renderBattle(false);maybeEnd();return;
 }
 if(occ){notice("Esa casilla ya está ocupada.");return;}
